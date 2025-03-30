@@ -16,8 +16,8 @@ interface MailchimpTemplateRequest {
 }
 
 export interface MailChimpMessage extends Options {
-  merge_vars: RecipientMergeVar[];
-  template: MailchimpTemplateRequest;
+  merge_vars?: RecipientMergeVar[];
+  template?: MailchimpTemplateRequest;
 }
 
 interface MailchimpTransportOptions {
@@ -67,8 +67,8 @@ class MailchimpTransport implements Transport {
     const message: MessagesMessage = this.buildMailchimpMessage(source);
 
     const mailchimpTemplateMsg: MessagesSendTemplateRequest = {
-      template_name: source.template.template_name,
-      template_content : source.template.template_content || [],
+      template_name: source.template?.template_name || '',
+      template_content : source.template?.template_content || [],
       message: {
         ...message,
         merge_vars: source.merge_vars || [],
