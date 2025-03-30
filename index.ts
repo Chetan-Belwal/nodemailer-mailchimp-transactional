@@ -64,7 +64,6 @@ class MailchimpTransport implements Transport {
     source: MailChimpMessage,
     callback: (err: Error | null, info?: SentMessageInfo) => void
   ) {
-    console.log("iam here");
     const message: MessagesMessage = this.buildMailchimpMessage(source);
 
     const mailchimpTemplateMsg: MessagesSendTemplateRequest = {
