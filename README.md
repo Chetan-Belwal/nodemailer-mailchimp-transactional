@@ -2,6 +2,10 @@
 
 A **Nodemailer** transport for integrating with **Mailchimp Transactional (Mandrill)**, allowing you to send emails with templates and merge variables using Nodemailer.
 
+# Contribution
+
+This is open source project your idea, suggestion and issues are welcomed, Its just getting started.
+
 ## ✨ Features
 
 - 📩 Send emails using **Mailchimp Transactional (Mandrill)**.
@@ -59,16 +63,19 @@ transporter.sendMail(mailOptions, (err, info) => {
 ### 3️⃣ Send an Email Using a Template
 
 ```typescript
-const mailOptions = {
+const mailOptions : MailChimpMessage = {
   from: 'sender@example.com',
   to: 'recipient@example.com',
   subject: 'Welcome to Our Platform!',
-
-    mergeVars: [
+  template: {
+    template_name: 'your template Name',
+    template_content : []
+  },
+  merge_vars: [
       {
         rcpt: 'recipient@example.com',
         vars: [
-          { name: 'FIRST_NAME', content: 'John' },
+          { name: 'FIRST_NAME', content: 'Ninja' },
           { name: 'WELCOME_TEXT', content: 'Welcome to our platform!' },
         ],
       },

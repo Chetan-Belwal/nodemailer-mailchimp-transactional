@@ -5,13 +5,19 @@ import MailchimpTransactional, {
   RecipientMergeVar,
   MessagesMessage,
   ApiClient,
+  TemplateContent,
 } from "@mailchimp/mailchimp_transactional";
 import * as packageData from "./package.json";
 import { Options } from "nodemailer/lib/mailer";
 
+interface MailchimpTemplateRequest {
+  template_name: string;
+  template_content: TemplateContent[];
+}
+
 export interface MailChimpMessage extends Options {
   merge_vars: RecipientMergeVar[];
-  template: MessagesSendTemplateRequest;
+  template: MailchimpTemplateRequest;
 }
 
 interface MailchimpTransportOptions {
