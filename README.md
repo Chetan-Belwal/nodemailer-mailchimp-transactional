@@ -19,13 +19,13 @@ This is open source project your idea, suggestion and issues are welcomed, Its j
 Install via npm:
 
 ```sh
-npm install nodemailer-mailchimp-transactional @mailchimp/mailchimp_transactional
+npm install nodemailer-mailchimp-transactional
 ```
 
 Or via yarn:
 
 ```sh
-yarn add nodemailer-mailchimp-transactional @mailchimp/mailchimp_transactional
+yarn add nodemailer-mailchimp-transactional
 ```
 
 ## 🚀 Usage
