@@ -1,6 +1,6 @@
 {
   "name": "nodemailer-mailchimp-transactional",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "module": "dis/index.mjs",
   "types": "dist/index.d.ts",
