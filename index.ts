@@ -96,22 +96,10 @@ class MailchimpTransport implements Transport {
 
     this.client.messages
       .send(mailchimpMsg)
-      .then((response: any) => {
-        const result = response[0];
-        if (result.status === "rejected" || result.status === "invalid") {
-          return callback(
-            new Error(
-              `Mailchimp error: ${result.reject_reason || "Invalid request"}`
-            )
-          );
+      .then((response: any ) => {
+        if(response instanceof Error) {
+          callback(response);
         }
-        callback(null, {
-          envelope: source.message.getEnvelope(),
-          messageId: result._id,
-        });
-      })
-      .catch((error: any) => {
-        callback(error);
       });
   }
 
