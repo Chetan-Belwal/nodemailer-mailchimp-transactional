@@ -21,13 +21,21 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@mailchimp/mailchimp_transactional": "^1.0.59",
-    "@types/mailchimp__mailchimp_transactional": "^1.0.11",
-    "@types/nodemailer": "^6.4.17"
+    "@mailchimp/mailchimp_transactional": "^1.0.59"
   },
   "devDependencies": {
+    "@types/mailchimp__mailchimp_transactional": "^1.0.11",
+    "@types/nodemailer": "^6.4.17",
     "nodemailer": "^6.10.0",
     "tsup": "^8.4.0",
     "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "nodemailer": "^6.10.0"
+  },
+  "peerDependenciesMeta": {
+  "nodemailer": {
+    "optional": false
   }
+}
 }
