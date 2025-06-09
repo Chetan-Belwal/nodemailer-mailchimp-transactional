@@ -2,7 +2,7 @@
   "name": "nodemailer-mailchimp-transactional",
   "version": "1.0.6",
   "main": "dist/index.js",
-  "module": "dis/index.mjs",
+  "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup index.ts --dts --format cjs,esm --outDir dist"
@@ -12,14 +12,16 @@
     "mailchimp",
     "mailchimp__mailchimp_transactional",
     "mailchimp-transactional",
-    "transactional-emails"
+    "transactional-emails",
+    "nodemailer-transport",
+    "nodemailer-mailchimp-transactional"
   ],
   "repository": {
     "url": "https://github.com/Chetan-Belwal/nodemailer-mailchimp-transactional"
   },
   "author": "Chetan Belwal",
   "license": "ISC",
-  "description": "",
+  "description": "Mailchimp transactional transporter for nodemailer",
   "dependencies": {
     "@mailchimp/mailchimp_transactional": "^1.0.59"
   },
@@ -31,11 +33,6 @@
     "typescript": "^5.8.2"
   },
   "peerDependencies": {
-    "nodemailer": "^6.10.0"
-  },
-  "peerDependenciesMeta": {
-    "nodemailer": {
-      "optional": false
-    }
+    "nodemailer": ">=6.x"
   }
 }
